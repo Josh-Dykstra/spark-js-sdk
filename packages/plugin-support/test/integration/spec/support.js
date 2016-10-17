@@ -29,7 +29,7 @@ describe(`plugin-support`, function() {
     }));
 
   describe(`#submitLogs()`, () => {
-    describe(`when the current user is not authorized`, () => {
+    describe(`when the current user is authorized`, () => {
       before(() => testUsers.create({count: 1})
         .then((users) => {
           spark = new CiscoSpark({
